@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "809234288517",
+    "firebase_url": "https://mypersonaltutor-21816.firebaseio.com",
+    "project_id": "mypersonaltutor-21816",
+    "storage_bucket": "mypersonaltutor-21816.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809234288517:android:0ca12d959532efbb9c7eec",
+        "android_client_info": {
+          "package_name": "com.mypersonal.tutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809234288517-po902ott6novh35ebaqg61fn6s1q061b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mypersonal.tutor",
+            "certificate_hash": "b9fc6672340c869d427d5a11e0078b24b547a66c"
+          }
+        },
+        {
+          "client_id": "809234288517-hbcldts4r28rhpki8toqfgoc9enar0ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7PFaplPE-ZSP1zQt9XyFo7-iMXZ9rLUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809234288517-hbcldts4r28rhpki8toqfgoc9enar0ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

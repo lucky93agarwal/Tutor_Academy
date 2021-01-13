@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_course"
+        android:icon="@drawable/account"
+        android:title="@string/title_course" />
+
+    <item
+        android:id="@+id/navigation_my_course"
+        android:icon="@drawable/curriculum"
+        android:title="Request" />
+
+    <item
+        android:id="@+id/navigation_wishlist"
+        android:icon="@drawable/icon_email"
+        android:title="Messages" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/account"
+        android:title="@string/title_account"
+        android:iconTint="@color/colorPrimary"/>
+</menu>

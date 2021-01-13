@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mypersonal.tutor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.ContactUsActivity"></activity>
+        <activity android:name=".testing.TestingActivity" />
+        <activity android:name=".Activities.StudentEditProfileActivity" />
+        <activity android:name=".Activities.TutorEditProfileActivity" />
+        <activity android:name=".Activities.StudentReserveRequestActivity" />
+        <activity android:name=".Activities.TutorActivity" />
+        <activity android:name=".Activities.TutordetailsActivity" />
+        <activity android:name=".Activities.UserProfileActivity" />
+        <activity android:name=".Activities.ReserveRequestActivity" />
+        <activity android:name=".Activities.StudentDetailsActivity" />
+        <activity android:name=".Activities.PersonalTutorActivity" />
+        <activity android:name=".Activities.TutorListActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Razorpay.RazorpayActivity" />
+        <activity android:name=".anurag.register.customadapter.RequestDemoClass" />
+        <activity android:name=".anurag.register.customadapter.TutorDetailsActivity" />
+        <activity android:name=".anurag.register.customadapter.StudentDetailActivity" />
+        <activity android:name=".anurag.register.PaymentGate" />
+        <activity android:name=".Activities.ChatActivity" />
+        <activity android:name=".Activities.Signup" />
+        <activity
+            android:name=".Activities.ChangePasswordActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.QuizActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignInActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" /> <!-- No History true means it will not let you go back to this activity... thats cool -->
+        <activity
+            android:name=".Activities.LauncherActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+<activity
+            android:name=".Activities.BottomNavigationActivity"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".Activities.PopUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PopUp" />
+        <activity
+            android:name=".Activities.FullScreenLessonPlayerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".Activities.CourseDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CoursesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_0Q9QUVz0kaWmK3" />
+    </application>
+
+</manifest>

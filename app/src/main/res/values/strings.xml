@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Personal Tutor</string>
+    <string name="title_course">Tutor</string>
+    <string name="title_my_course">Request</string>
+    <string name="title_wishlist">Messages</string>
+    <string name="title_account">Account</string>
+
+    <string-array name="lesson_options">
+        <item>Choose an option</item>
+        <item>Course Details</item>
+        <item>Share This Course</item>
+    </string-array>
+
+    <string name="title_activity_progress_bar">ProgressBar</string>
+    <string name="title_activity_lesson">LessonActivity</string>
+
+
+    <!--  &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;
+      <string name="hello_blank_fragment">Hello blank fragment</string>
+      <string name="title_activity_quiz">QuizActivity</string>
+      <string name="default_web_client_id">default id</string>-->
+    <string name="facebook_app_id">675772876462181</string>
+    <string name="fb_login_protocol_scheme">fb675772876462181</string>
+    <string name="updated">updated</string>
+
+
+</resources>

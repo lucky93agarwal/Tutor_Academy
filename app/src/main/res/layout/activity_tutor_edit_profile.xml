@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lightSkyBlue"
+    android:layout_height="match_parent">
+
+    <!--<include
+        android:id="@+id/signup_page_toolbar"
+        layout="@layout/signup_app_bar_layout"
+        />-->
+    <!--android:layout_below="@+id/signup_page_toolbar"-->
+    <ScrollView
+        android:id="@+id/sigup_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/ui_lin_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+                android:id="@+id/ui_loginlogo"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_page_toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="25sp"
+                android:text="Edit Profile As Tutor:"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/ui_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="professional"
+                android:textSize="1dp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/tutor_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <Spinner
+                    android:id="@+id/ui_tutor_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp"
+                    android:visibility="gone"/>
+
+                <View
+                    android:id="@+id/ui_spinner_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#fff" />
+
+                <EditText
+                    android:id="@+id/ui_username_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Full Name"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#fff" />
+
+                <EditText
+                    android:id="@+id/ui_email_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Email Address"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textEmailAddress"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_tutor_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:maxEms="10"
+                    android:maxLength="10"
+                    android:hint="Mobile No."
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_tutor_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Age"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <Spinner
+                    android:id="@+id/tutor_qualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/tutor_experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Experience"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/darkNavyBlue" />
+                <Button
+                    android:id="@+id/tutor_fee_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/darkNavyBlue"
+                    android:text="Subject"
+                    android:textColor="@color/white"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/darkNavyBlue" />
+                <EditText
+                    android:id="@+id/tutor_subject_offered"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Subject Offered"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/darkNavyBlue" />
+
+
+                <EditText
+                    android:id="@+id/specialization"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Any Specialization"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/darkNavyBlue" />
+
+                <Button
+                    android:id="@+id/tutor_city"
+                    android:layout_width="match_parent"
+                    android:text="City"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/tutor_days"
+                    android:layout_width="match_parent"
+                    android:text="Days"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/tutor_willing_to_traveling"
+                    android:layout_width="match_parent"
+                    android:text="Willing to traveling"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/tutor_tuition_type"
+                    android:layout_width="match_parent"
+                    android:text="Tuition type"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+                <EditText
+                    android:id="@+id/tutor_current_city"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Current City"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/area_ofteaching"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Area of teaching"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/time_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@color/darkNavyBlue"
+                    android:text="Time Duration alloted to student"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <Spinner
+                    android:id="@+id/tutor_fee_structure"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/student_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/ui_student_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Full Name"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_email_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Email Address"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textEmailAddress"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_mobile_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Mobile No."
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:padding="7sp"
+                    android:maxLength="10"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_school_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="School Name"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/tutor_city_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="City"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:paddingLeft="5dp" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"/>
+                <EditText
+                    android:id="@+id/ui_city_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Current City"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:visibility="gone"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/ui_Location_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Current Location"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/class_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Class"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <Spinner
+                    android:id="@+id/student_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:visibility="gone"
+                    android:paddingLeft="5dp" />
+                <Button
+                    android:id="@+id/week_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:text="Week Subject"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/stdent_fee_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:text="Subject"
+                    android:paddingLeft="5dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/weak_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Weak subject"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/white" />
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/student_timing"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="45sp"-->
+                <!--                    android:layout_marginLeft="7sp"-->
+                <!--                    android:background="@null"-->
+                <!--                    android:hint="Suitasble timing"-->
+                <!--                    android:imeActionLabel="Sign In"-->
+                <!--                    android:imeOptions="actionUnspecified"-->
+                <!--                    android:inputType="text"-->
+                <!--                    android:padding="7sp"-->
+                <!--                    android:textColorHint="#ffffff"
+                                        android:textColor="@color/white"-->
+                <!--                    android:textSize="15sp" />-->
+
+                <Button
+                    android:id="@+id/student_timing"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@color/darkNavyBlue"
+                    android:textColor="@color/white"
+                    android:text="Suitasble timing"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/student_shortdec"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_marginLeft="7sp"
+                    android:background="@null"
+                    android:hint="Short Discription"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:padding="7sp"
+                    android:textColorHint="#ffffff"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/upload_student_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkNavyBlue"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="Upload pic"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/student_pic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/image_border_side"
+                    android:layout_marginLeft="60dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ui_signup"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Upload Account"
+                android:textAllCaps="false"
+                android:background="@drawable/complete_rounded_skyblue_button"
+                android:textColor="#ffffff" />
+
+            <!--  <LinearLayout
+                  android:id="@+id/ui_login_linearlayout2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginTop="20sp">
+
+                &lt;!&ndash;  <TextView
+                      android:id="@+id/ui_signinaccount_text"
+                      android:layout_width="match_parent"
+                      android:layout_height="40sp"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="2sp"
+                      android:layout_marginBottom="2sp"
+                      android:gravity="center"
+                      android:text="signup_bottom_text"
+                      android:textColor="#000000"
+                      android:textSize="15sp" />&ndash;&gt;
+
+              </LinearLayout>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

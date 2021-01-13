@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:id="@+id/homePageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/myCourseView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/textColorGrey"
+            android:visibility="gone"
+            android:elevation="200dp"
+            style="@style/SpinKitView.Circle"/>
+
+        <!--This textview and the recycler view is responsible for top course section-->
+        <TextView
+            android:id="@+id/myCoursesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Request"
+            android:layout_below="@+id/linearlayout"
+            style="@style/headerTitleLabel" />
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/myCoursesGridLayout"
+            android:layout_below="@id/myCoursesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:verticalScrollbarPosition="right"
+            android:visibility="gone"
+            android:scrollbars="vertical">
+
+        </GridView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <Button
+                android:id="@+id/allrequest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#FFA23D"
+                android:text="Request"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"/>
+
+
+            <Button
+                android:id="@+id/connectbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#8398E3"
+                android:text="Connected Tutor"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"/>
+
+
+
+
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/myCoursesLabel"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagerecyclerView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/recyclerView"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/signin_placeholder" />
+</RelativeLayout>
